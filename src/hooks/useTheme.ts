@@ -23,7 +23,7 @@ function changeBodyBgColor(theme: Theme) {
   body.style.setProperty('background-color', theme.palette.background.default)
 }
 
-export const useTheme = () => {
+export const useTheme = () : [Theme, () => void] => {
   const [storedValue, setStoredValue] = useLocalStorage('theme', 'light');
   const preferredTheme = storedValue === 'light' ? lightTheme : darkTheme;
   const [theme, setTheme] = useState(preferredTheme);
