@@ -7,7 +7,9 @@ function App() {
   const [theme, changeTheme] = useTheme();
   return (
     <ThemeProvider theme={theme}>
-      <Button variant="contained" onClick={changeTheme}>Change theme</Button>
+      <Button variant="contained" onClick={changeTheme} color="primary">
+        Change theme
+      </Button>
     </ThemeProvider>
   );
 }
